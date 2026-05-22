@@ -1,9 +1,3 @@
-![Next.js](https://img.shields.io/badge/Next.js-16.1-black?logo=next.js)
-![React](https://img.shields.io/badge/React-19-61dafb?logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?logo=typescript)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-06b6d4?logo=tailwindcss)
-![License](https://img.shields.io/badge/License-MIT-green)
-
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-sync--video--label.vercel.app-brightgreen?logo=vercel)](https://sync-video-label.vercel.app)
 [![Annotation Software](https://img.shields.io/badge/Annotation%20Software-sync--video--label-blue?logo=github)](https://github.com/wangyz1999/sync-video-label)
 [![Project Page](https://img.shields.io/badge/Project%20Page-GameplayQA-blue?logo=github)](https://hats-ict.github.io/gameplayqa/)
@@ -11,6 +5,7 @@
 [![Paper](https://img.shields.io/badge/Paper-arXiv-FF0066?logo=arxiv)](https://arxiv.org/abs/2603.24329)
 [![Demo Video](https://img.shields.io/badge/Demo%20Video-YouTube-red?logo=youtube)](https://www.youtube.com/watch?v=PKedELJ4XT0)
 ![ACL 2026](https://img.shields.io/badge/ACL-2026-purple)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 # GameplayQA
 
