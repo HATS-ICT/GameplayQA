@@ -7,7 +7,7 @@
 ![ACL 2026](https://img.shields.io/badge/ACL-2026-purple)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-<img width="1771" height="1101" alt="banner" src="https://github.com/user-attachments/assets/3c263db5-be8e-474c-b61a-b13a38c56a62" />
+<a href="https://hats-ict.github.io/gameplayqa/"><img width="1771" height="1101" alt="banner" src="https://github.com/user-attachments/assets/3c263db5-be8e-474c-b61a-b13a38c56a62" /></a>
 
 
 # GameplayQA
