@@ -12,7 +12,7 @@
 
 # GameplayQA
 
-GameplayQA is a benchmark for decision-dense, POV-synced video question answering in 3D gameplay environments. It provides multiple-choice questions grounded in short gameplay segments, including single-view temporal reasoning and synchronized multi-view reasoning.
+GameplayQA is a benchmark for decision-dense, POV-synced video question answering in 3D gameplay environments. It provides multiple-choice questions grounded in short gameplay segments, including single-view temporal reasoning and synchronized multi-view reasoning. The benchmark is described in the paper [GameplayQA: A Benchmarking Framework for Decision-Dense POV-Synced Multi-Video Understanding of 3D Virtual Agents](https://arxiv.org/abs/2603.24329).
 
 The released dataset is on [Hugging Face (`wangyz1999/GameplayQA`)](https://huggingface.co/datasets/wangyz1999/GameplayQA). This repository contains:
 
