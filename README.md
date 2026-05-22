@@ -30,36 +30,53 @@ This repository requires [FFmpeg](https://ffmpeg.org/) installed and available o
 
 ```bash
 uv sync
-python download_data.py
+uv run download_data.py
 ```
 
 Rename [`.env.example`](.env.example) to `.env`, then edit `.env` and set the API keys for the model providers you plan to use (you only need the keys you will actually call).
 
 ## Standard Workflow
 
+### Dataset split (`--split`)
+
+- **`qa`**: main split of gameplay videos, questions in `data/qa.csv` (default if you omit `--split`).
+- **`generalization`**: generalization split, questions in `data/qa_generalization.csv`.
+
+### Parallel workers (`--workers`)
+
+- **`run_benchmark.py`**: `-w` / `--workers` sets how many questions are benchmarked in parallel (default **5**). Increase it if your API rate limits allow; decrease it if you see throttling or want a lighter load.
+- **With `--judge`**: `--judge-workers` controls parallel judging workers (default **5**).
+- **`process_data.py`**: `--workers` controls parallel frame extraction (default **4**); see [args.md](args.md).
+
 Prepare the benchmark split. This crops each question's video segment and builds the frame cache used by frame-based vision models.
 
 ```bash
-python process_data.py --split qa
+uv run process_data.py --split qa
 ```
 
 Run a model on the prepared split.
 
 ```bash
-python run_benchmark.py --split qa --model gpt-5-mini --judge
+uv run run_benchmark.py --split qa --model gpt-5-mini --judge
+```
+
+Example with higher parallelism (tune to your API limits):
+
+```bash
+uv run run_benchmark.py --split qa --model gpt-5-mini --judge -workers 8 --judge-workers 8
 ```
 
 If you run the benchmark without `--judge`, judge the raw model responses separately.
 
 ```bash
-python llm_as_a_judge.py --split qa --model gpt-5-mini
+uv run llm_as_a_judge.py --split qa --model gpt-5-mini
 ```
 
 Evaluate and plot the judged results.
 
 ```bash
-python evaluate_results.py --split qa
-python plot_results.py --split qa
+uv run evaluate_results.py --split qa
+uv run plot_results.py --split qa
 ```
 
 The same workflow can be run on the generalization split by replacing `qa` with `generalization`.
@@ -78,9 +95,9 @@ The default output paths are stable, so each pipeline step can automatically fin
 Run an ablation benchmark, judge it, and include it in evaluation:
 
 ```bash
-python ablation_benchmark.py --split qa --model gpt-5-mini --ablation no_video
-python llm_as_a_judge.py --split qa --model gpt-5-mini --ablation no_video
-python evaluate_ablation.py --split qa
+uv run ablation_benchmark.py --split qa --model gpt-5-mini --ablation no_video
+uv run llm_as_a_judge.py --split qa --model gpt-5-mini --ablation no_video
+uv run evaluate_ablation.py --split qa
 ```
 
 Available ablations are `no_video`, `random_single_frame`, and `shuffled_frames`.
