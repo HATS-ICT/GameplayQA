@@ -7,6 +7,9 @@
 ![ACL 2026](https://img.shields.io/badge/ACL-2026-purple)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
+<img width="1771" height="1101" alt="banner" src="https://github.com/user-attachments/assets/3c263db5-be8e-474c-b61a-b13a38c56a62" />
+
+
 # GameplayQA
 
 GameplayQA is a benchmark for decision-dense, POV-synced video question answering in 3D gameplay environments. It provides multiple-choice questions grounded in short gameplay segments, including single-view temporal reasoning and synchronized multi-view reasoning.
